@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""aaaa"""
 from flask import Flask
 from models import storage
 from api.v1.views import app_views
@@ -9,7 +10,8 @@ app.register_blueprint(app_views)
 
 @app.teardown_appcontext
 def teardown(exception):
-        storage.close()
+    """aaaa"""
+    storage.close()
 
 if __name__ == "__main__":
     app.run(host=getenv("HBNB_API_HOST", "0.0.0.0"), 
